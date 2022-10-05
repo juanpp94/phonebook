@@ -4,6 +4,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuCardComponent } from './components/menu-card/menu-card.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { ContactsRoutingModule } from '../contacts/contacts-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +17,8 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     ContactCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,
