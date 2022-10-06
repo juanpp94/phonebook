@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Contact } from 'src/app/models/contact.interface';
+import { ContactsService } from '../../service/contacts.service';
 
 @Component({
   selector: 'app-edit-contact',
@@ -6,10 +10,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
+  int_id: number = -1;
+  edit_contact_form = new FormGroup({
+    first_name: new FormControl('',Validators.required),
+    last_name: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required, Validators.email]),
+    telephone: new FormControl('',[Validators.required])
 
-  constructor() { }
+  })
+  constructor(private route: ActivatedRoute, private _contact_service: ContactsService, private router: Router) { }
 
   ngOnInit(): void {
+    let id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+    this.int_id = parseInt(id!);
+    this.set_contact_info(this.int_id);
+    
+  }
+
+  set_contact_info(id:number): void {
+    let contact = this._contact_service.get_contact(id);
+    this.edit_contact_form.setValue({first_name: contact.first_name, last_name: contact.last_name, email: contact.email, telephone: contact.telephone});
+    // this.edit_contact_form.value.last_name = contact.last_name;
+    // this.edit_contact_form.value.email = contact.email;
+    // this.edit_contact_form.value.telephone = contact.telephone;
+  }
+
+  update_contact_info() {
+    let contact_info_updated = {id:this.int_id, ...this.edit_contact_form.value} as Contact;
+    // let contact_info_updated = this.edit_contact_form.value;
+    // contact_info_updated['id'] = this.int_id;
+    console.log(contact_info_updated);
+    this._contact_service.edit_contact(contact_info_updated);
+    this.edit_contact_form.reset();
+    this.router.navigate(['/list']);
   }
 
 }

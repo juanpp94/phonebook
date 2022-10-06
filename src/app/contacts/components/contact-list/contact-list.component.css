@@ -1,0 +1,59 @@
+.template {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    article {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .user-image {
+        text-align: center;
+
+    }
+
+    .user-image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header {
+        margin-top: 25px;
+        margin-left: 45px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: end;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .operations {
+        width: 30px;
+        height: 30px;
+    }
+    /* .contact-header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    picture {
+        display: flex;
+        justify-content: center;
+    }
+
+    .operations {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .icons {
+        width: 60px;
+        height: 60px;
+    } */
+    
+}

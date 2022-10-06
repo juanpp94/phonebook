@@ -1,1 +1,26 @@
-<p>add-contact works!</p>
+<section class="add-contact-form mt-5 mb-5">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Add Contact</h5>
+          <form [formGroup]="add_contact_form" (ngSubmit)="send_contact_info()">
+            <div class="mb-3">
+                <label for="first_name" class="form-label">First name:</label>
+                <input type="text" class="form-control" id="first_name" formControlName="first_name">
+            </div>
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last name:</label>
+                <input type="text" class="form-control" id="last_name" formControlName="last_name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" formControlName="email">
+            </div>
+            <div class="mb-3">
+              <label for="telephone" class="form-label">Telephone:</label>
+              <input type="tel" class="form-control" id="telephone" formControlName="telephone">
+            </div>
+            <button type="submit"  [disabled]="!add_contact_form.valid" class="btn btn-primary btn-lg">Submit</button>
+          </form>
+        </div>
+    </div>
+</section>

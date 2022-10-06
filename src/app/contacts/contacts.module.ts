@@ -6,6 +6,8 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactsService } from './service/contacts.service';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     CommonModule,
-    ContactsRoutingModule
-  ]
+    ContactsRoutingModule,
+    ReactiveFormsModule
+  ],
+  providers: [ContactsService],
 })
 export class ContactsModule { }
