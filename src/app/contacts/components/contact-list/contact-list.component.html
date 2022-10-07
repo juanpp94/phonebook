@@ -3,13 +3,40 @@
         <h5>You have not registered any contact yet</h5>
     </article>
     <article *ngFor="let contact of contacts">
-        <div class="card pt-3">
-            <picture class="user-image">
-                <img class="icons img-fluid rounded-start" src="../../../../assets/user.png" alt="user-image">
-            </picture>
-            <div class="contact-info">
-                <header>
+        <div class="card pt-3 ">
+            <header>
+                <div class="contact-info">
+                    <picture class="icons">
+                        <img class="img-fluid rounded-start" src="../../../../assets/user.png" alt="user-image">
+                    </picture>
                     <h5 class="card-title">{{contact.first_name}} {{contact.last_name}}</h5>
+                </div>
+                <div class="contact-info">
+                    <picture class="icons">
+                        <img class="img-fluid rounded-start" src="../../../../assets/smartphone.png" alt="smartphone-image">
+                    </picture>
+                    <p class="card-text">{{contact.telephone}}</p>
+                </div>
+                <div class="contact-info">
+                    <picture class="icons">
+                        <img class="img-fluid rounded-start" src="../../../../assets/envelope.png" alt="envelope-image">
+                    </picture>
+                    <p class="card-text"><small class="text-muted">{{contact.email}}</small></p>
+                </div>
+
+            </header>
+            <footer>
+                <picture class="icons">
+                    <img class="img-fluid rounded-start" routerLink="/edit/{{contact.id}}" src="../../../../assets/edit.png" alt="edit-icon">
+                </picture>
+                <picture class="icons">
+                    <img class="img-fluid rounded-start" (click)="delete_contact(contact.id)" src="../../../../assets/delete.png" alt="delete-icon">
+                </picture>
+            </footer>
+            <!-- <div class="contact-info">
+                <header>
+                    
+                    
                     <p class="card-text">{{contact.telephone}}</p>
                     <p class="card-text"><small class="text-muted">{{contact.email}}</small></p>
                 </header>
@@ -17,7 +44,7 @@
                     <img class="operations" routerLink="/edit/{{contact.id}}" src="../../../../assets/edit.png" alt="edit-icon">
                     <img class="operations" (click)="delete_contact(contact.id)" src="../../../../assets/delete.png" alt="delete-icon">
                 </footer>
-            </div>
+            </div> -->
         </div>
         <!-- <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">

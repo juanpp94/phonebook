@@ -4,56 +4,237 @@
     justify-content: center;
 }
 
+article {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+}
+
+header {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+}
+
+.card-title {
+    justify-content: center;
+    align-self: center;
+}
+
+footer {
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    gap: 15px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    
+    article {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    header {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-info {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .card-title {
+        justify-content: center;
+        align-self: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content:flex-end;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        gap: 15px;
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+    
+    article {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    header {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-info {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .card-title {
+        justify-content: center;
+        align-self: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content:flex-end;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        gap: 15px;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    
+    article {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 50px;
+    }
+
+    header {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-info {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .card-title {
+        justify-content: center;
+        align-self: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content:flex-end;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        gap: 15px;
+    }
+    
+}
 
 @media only screen and (max-width: 600px) {
 
     article {
         margin-left: 25px;
         margin-right: 25px;
-    }
-
-    .user-image {
-        text-align: center;
-
-    }
-
-    .user-image img {
-        width: 80px;
-        height: 80px;
+        margin-top: 50px;
     }
 
     header {
+        margin-left: 25px;
+        margin-right: 25px;
         margin-top: 25px;
-        margin-left: 45px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-info {
+        display: flex;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .card-title {
+        justify-content: center;
+        align-self: center;
     }
 
     footer {
         display: flex;
-        justify-content: end;
-        margin-top: 15px;
+        justify-content:flex-end;
         margin-bottom: 15px;
-    }
-    .operations {
-        width: 30px;
-        height: 30px;
-    }
-    /* .contact-header {
-        display: flex;
-        justify-content: space-around;
+        margin-right: 15px;
+        gap: 15px;
     }
 
-    picture {
-        display: flex;
-        justify-content: center;
-    }
 
-    .operations {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .icons {
-        width: 60px;
-        height: 60px;
-    } */
     
 }
