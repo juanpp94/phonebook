@@ -1,10 +1,16 @@
 .template {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: tomato;
 }
 
-article {
+/* .contact-card {
+  padding-left:10px;
+  padding-right: 10px;
+} */
+
+/* article {
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 50px;
@@ -50,7 +56,7 @@ footer {
 
 
 @media only screen and (max-width: 1200px) {
-    
+
     article {
         margin-left: 25px;
         margin-right: 25px;
@@ -63,7 +69,7 @@ footer {
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
+
     .contact-info {
         display: flex;
         gap: 25px;
@@ -93,11 +99,11 @@ footer {
         margin-right: 15px;
         gap: 15px;
     }
-    
+
 }
 
 @media only screen and (max-width: 992px) {
-    
+
     article {
         margin-left: 25px;
         margin-right: 25px;
@@ -110,7 +116,7 @@ footer {
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
+
     .contact-info {
         display: flex;
         gap: 25px;
@@ -140,11 +146,11 @@ footer {
         margin-right: 15px;
         gap: 15px;
     }
-    
+
 }
 
 @media only screen and (max-width: 768px) {
-    
+
     article {
         margin-left: 25px;
         margin-right: 25px;
@@ -157,7 +163,7 @@ footer {
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
+
     .contact-info {
         display: flex;
         gap: 25px;
@@ -187,7 +193,7 @@ footer {
         margin-right: 15px;
         gap: 15px;
     }
-    
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -204,7 +210,7 @@ footer {
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    
+
     .contact-info {
         display: flex;
         gap: 25px;
@@ -236,5 +242,5 @@ footer {
     }
 
 
-    
-}
+
+} */

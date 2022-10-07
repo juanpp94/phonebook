@@ -2,3 +2,28 @@
     display: flex;
     justify-content: center;
 }
+
+.img-fluid {
+  height: 90%;
+}
+
+.card-title {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-fluid {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .img-fluid {
+    display: none;
+  }
+
+  .card {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}

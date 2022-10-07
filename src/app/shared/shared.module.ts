@@ -23,7 +23,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     NavbarComponent,
     FooterComponent,
-    MenuCardComponent
+    MenuCardComponent,
+    ContactCardComponent
   ]
 })
 export class SharedModule { }

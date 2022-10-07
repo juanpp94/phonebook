@@ -8,6 +8,7 @@ import { EditContactComponent } from './components/edit-contact/edit-contact.com
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactsService } from './service/contacts.service';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ContactsService } from './service/contacts.service';
   imports: [
     CommonModule,
     ContactsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [ContactsService],
 })
