@@ -1,0 +1,30 @@
+h5 {
+    text-align: center;
+    color: #531bba;
+}
+
+
+.card {
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0.3rem 0.6rem;
+    border-radius: 0px;
+}
+
+.card:hover {
+    border-color: black;
+}
+
+.shortcuts {
+    display: flex;
+    column-gap: 25px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .shortcuts {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+}

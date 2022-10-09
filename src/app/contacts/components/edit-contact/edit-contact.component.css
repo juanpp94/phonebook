@@ -1,0 +1,70 @@
+
+.edit-contact-form {
+    display: flex;
+    justify-content: center;
+    min-height: 91vh;
+    background-color: rgb(255, 237, 203);
+}
+
+.add-icon {
+  display: flex;
+  margin-top: 50%;
+}
+
+.error-icon {
+  display: flex;
+  background: url(../../../../assets/error.png);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  padding-left: 20px;
+  color: red;
+  background-position-y: 5px;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-fluid {
+  height: 150px;
+  margin-top: 15px;
+}
+
+.card-title {
+  text-align: center;
+  background: linear-gradient(7deg, rgb(255, 58, 45) 45%, rgb(255, 197, 0) 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.card {
+  border-radius: 0.09rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0.3rem 0.6rem;
+}
+
+
+.btn-warning {
+  font-weight: 700;
+  color: white;
+  border-radius: 3px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .col-md-4 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .card {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}

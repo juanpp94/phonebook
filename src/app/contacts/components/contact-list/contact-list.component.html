@@ -1,0 +1,47 @@
+<main class="template">
+    <article class="no-contacts-message" *ngIf="contacts.length === 0">
+        <h5>You have not registered any contact yet</h5>
+    </article>
+    <!-- <article *ngFor="let contact of contacts">
+      <div class="card pt-3 pb-3 " style="width: 18rem;">
+          <header>
+              <div class="contact-info">
+                  <picture class="icons">
+                      <img class="img-fluid rounded-start" src="../../../../assets/user.png" alt="user-image">
+                  </picture>
+                  <h5 class="card-title">{{contact.first_name}} {{contact.last_name}}</h5>
+              </div>
+              <div class="contact-info">
+                  <picture class="icons">
+                      <img class="img-fluid rounded-start" src="../../../../assets/smartphone.png" alt="smartphone-image">
+                  </picture>
+                  <p class="card-text">{{contact.telephone}}</p>
+              </div>
+              <div class="contact-info">
+                  <picture class="icons">
+                      <img class="img-fluid rounded-start" src="../../../../assets/envelope.png" alt="envelope-image">
+                  </picture>
+                  <p class="card-text"><small class="text-muted">{{contact.email}}</small></p>
+              </div>
+  
+          </header>
+          <footer>
+              <picture id="edit-icon">
+                  <img class="img-fluid rounded-start" routerLink="/edit/{{contact.id}}" src="../../../../assets/edit.png" alt="edit-icon">
+              </picture>
+              <picture id="delete-icon">
+                  <img class="img-fluid rounded-start" (click)="delete_contact(contact.id)" src="../../../../assets/delete.png" alt="delete-icon">
+              </picture>
+          </footer>
+      </div>
+  </article> -->
+  
+    <app-contact-card  (messageEvent)="receive_update($event)" [contact]="contact" 
+    *ngFor="let contact of contacts | paginate: { itemsPerPage: 3, currentPage: page }"></app-contact-card>
+</main>
+<pagination-controls *ngIf="contacts.length !== 0"class="my-pagination"(pageChange)="page = $event" ></pagination-controls>
+    
+
+
+
+
