@@ -1,0 +1,53 @@
+main {
+    background-color: rgb(255, 237, 203);
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+    
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 25px;
+    color: #531bba;
+    font-weight: 800;
+}
+
+h6 {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #531bba;
+    font-weight: 600;
+
+}
+
+h5 {
+    text-align: center;
+    color: #531bba;
+}
+
+
+.card {
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0.3rem 0.6rem;
+}
+
+.card:hover {
+    border-color: black;
+}
+@media only screen and (max-width: 1200px) {
+    main {
+        column-gap: 25px;
+    }
+
+    
+}
+
+
+
+
