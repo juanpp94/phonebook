@@ -1,4 +1,40 @@
-.card {
+h5 {
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3rem 0.6rem
+    color: #531bba;
+}
+
+
+.card {
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0.3rem 0.6rem;
+}
+
+.card:hover {
+    border-color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .shortcuts {
+        display: flex;
+        column-gap: 25px;
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+
+    .shortcuts {
+        display: flex;
+        column-gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .shortcuts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
 }

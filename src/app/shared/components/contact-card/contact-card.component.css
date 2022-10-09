@@ -2,7 +2,7 @@ article {
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 50px;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3rem 0.6rem; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3rem 0.6rem;
 }
 
 header {
@@ -29,11 +29,37 @@ header {
     height: 35px;
 }
 
+.operations {
+    width: 15px;
+}
+
+#edit-icon {
+    width: 20px;
+    height:20px;
+}
+
+#delete-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+
 .card-title {
     justify-content: center;
     align-self: center;
+    color: #531bba;
+    font-weight: 700;
 }
 
+.card-text {
+    font-weight: 700;
+}
+
+small {
+    font-weight: 400;
+    color: rgb(21, 1, 50);
+}
 footer {
     display: flex;
     justify-content:flex-end;

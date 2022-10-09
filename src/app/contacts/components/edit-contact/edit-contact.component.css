@@ -1,4 +1,41 @@
-.add-contact-form {
+.edit-contact-form {
     display: flex;
     justify-content: center;
+    min-height: 91vh;
+    background-color: rgb(255, 237, 203)
 }
+
+.card {
+    border-radius: 1.5rem;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0.3rem 0.6rem;
+  }
+
+
+  .card-title {
+    text-align: center;
+    background: linear-gradient(7deg, rgb(255, 58, 45) 45%, rgb(255, 197, 0) 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  
+  }
+
+  .btn-warning {
+    font-weight: 700;
+    color: white;
+    border-radius: 3px;
+  }
+
+@media only screen and (max-width: 600px) {
+
+    .alert-danger {
+      margin-top: 15px;
+      padding: 5px;
+    }
+  
+    .card {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }

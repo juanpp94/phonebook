@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Contact } from 'src/app/models/contact.interface';
 import { ContactsService } from '../../service/contacts.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -11,6 +11,7 @@ import { ContactsService } from '../../service/contacts.service';
 export class ContactListComponent implements OnInit {
 
   contacts:Contact[] = [];
+  message: string = '';
   constructor(private _contact_service: ContactsService) { }
 
   ngOnInit(): void {
@@ -24,12 +25,39 @@ export class ContactListComponent implements OnInit {
     
   }
 
-
-  delete_contact(id:number):void {
-    // console.log(id);
-    this._contact_service.delete_contact(id);
+  receive_update($event: string) {
+    this.message = $event;
     this.get_contacts();
-    
   }
+
+  // delete_contact(id:number):void {
+  //   // console.log(id);
+  //   Swal.fire({
+  //     title: 'Are you sure want to remove?',
+  //     text: 'You will not be able to recover this contact!',
+  //     icon: 'warning',
+  //     showCancelButton: true,
+  //     confirmButtonText: 'Yes, delete it!',
+  //     cancelButtonText: 'No, keep it'
+  //   }).then((result) => {
+  //     if (result.value) {
+  //       this._contact_service.delete_contact(id);
+  //       this.get_contacts();
+  //       Swal.fire(
+  //         'Deleted!',
+  //         'Your contact has been deleted.',
+  //         'success'
+  //       )
+  //     } else if (result.dismiss === Swal.DismissReason.cancel) {
+  //       Swal.fire(
+  //         'Cancelled',
+  //         'Your contact is safe :)',
+  //         'error'
+  //       )
+  //     }
+  //   })
+    
+    
+  // }
 
 }

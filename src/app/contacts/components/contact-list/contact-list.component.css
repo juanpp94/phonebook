@@ -2,245 +2,262 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  background-color: tomato;
+  min-height: 91vh;
+  background-color: rgb(255, 237, 203)
 }
 
-/* .contact-card {
-  padding-left:10px;
-  padding-right: 10px;
-} */
 
-/* article {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 50px;
+
+.no-contacts-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: #531bba;
+}
+
+article {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3rem 0.6rem; */
 }
 
 header {
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .contact-info {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 25px;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
 }
 
 .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icons img {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
+#delete-icon {
+    width: 20px;
+    height: 20px;
+}   
+
+#edit-icon {
+    width: 15px;
+    height: 15px;
+}
 .card-title {
-    justify-content: center;
-    align-self: center;
+  justify-content: center;
+  align-self: center;
 }
 
 footer {
-    display: flex;
-    justify-content:flex-end;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    gap: 15px;
+  display: flex;
+  justify-content:flex-end;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  gap: 15px;
 }
 
 
 
 @media only screen and (max-width: 1200px) {
 
-    article {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 50px;
-    }
+  article {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 50px;
+  }
 
-    header {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
+  header {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
 
-    .contact-info {
-        display: flex;
-        gap: 25px;
-        margin-bottom: 25px;
-    }
+  .contact-info {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 25px;
+  }
 
-    .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-    .icons img {
-        width: 35px;
-        height: 35px;
-    }
+  .icons img {
+      width: 35px;
+      height: 35px;
+  }
 
-    .card-title {
-        justify-content: center;
-        align-self: center;
-    }
+  .card-title {
+      justify-content: center;
+      align-self: center;
+  }
 
-    footer {
-        display: flex;
-        justify-content:flex-end;
-        margin-bottom: 15px;
-        margin-right: 15px;
-        gap: 15px;
-    }
+  footer {
+      display: flex;
+      justify-content:flex-end;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      gap: 15px;
+  }
 
 }
 
 @media only screen and (max-width: 992px) {
 
-    article {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 50px;
-    }
+  article {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 50px;
+  }
 
-    header {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
+  header {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
 
-    .contact-info {
-        display: flex;
-        gap: 25px;
-        margin-bottom: 25px;
-    }
+  .contact-info {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 25px;
+  }
 
-    .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-    .icons img {
-        width: 35px;
-        height: 35px;
-    }
+  .icons img {
+      width: 35px;
+      height: 35px;
+  }
 
-    .card-title {
-        justify-content: center;
-        align-self: center;
-    }
+  .card-title {
+      justify-content: center;
+      align-self: center;
+  }
 
-    footer {
-        display: flex;
-        justify-content:flex-end;
-        margin-bottom: 15px;
-        margin-right: 15px;
-        gap: 15px;
-    }
+  footer {
+      display: flex;
+      justify-content:flex-end;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      gap: 15px;
+  }
 
 }
 
 @media only screen and (max-width: 768px) {
 
-    article {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 50px;
-    }
+  article {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 50px;
+  }
 
-    header {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
+  header {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
 
-    .contact-info {
-        display: flex;
-        gap: 25px;
-        margin-bottom: 25px;
-    }
+  .contact-info {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 25px;
+  }
 
-    .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-    .icons img {
-        width: 35px;
-        height: 35px;
-    }
+  .icons img {
+      width: 35px;
+      height: 35px;
+  }
 
-    .card-title {
-        justify-content: center;
-        align-self: center;
-    }
+  .card-title {
+      justify-content: center;
+      align-self: center;
+  }
 
-    footer {
-        display: flex;
-        justify-content:flex-end;
-        margin-bottom: 15px;
-        margin-right: 15px;
-        gap: 15px;
-    }
+  footer {
+      display: flex;
+      justify-content:flex-end;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      gap: 15px;
+  }
 
 }
 
 @media only screen and (max-width: 600px) {
 
-    article {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 50px;
-    }
+  article {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 50px;
+  }
 
-    header {
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
+  header {
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
 
-    .contact-info {
-        display: flex;
-        gap: 25px;
-        margin-bottom: 25px;
-    }
+  .contact-info {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 25px;
+  }
 
-    .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-    .icons img {
-        width: 35px;
-        height: 35px;
-    }
+  .icons img {
+      width: 35px;
+      height: 35px;
+  }
 
-    .card-title {
-        justify-content: center;
-        align-self: center;
-    }
+  .card-title {
+      justify-content: center;
+      align-self: center;
+  }
 
-    footer {
-        display: flex;
-        justify-content:flex-end;
-        margin-bottom: 15px;
-        margin-right: 15px;
-        gap: 15px;
-    }
+  footer {
+      display: flex;
+      justify-content:flex-end;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      gap: 15px;
+  }
 
 
 
-} */
+}
+

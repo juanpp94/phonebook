@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Contact } from 'src/app/models/contact.interface';
 import { ContactsService } from '../../service/contacts.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
@@ -33,6 +33,7 @@ export class AddContactComponent implements OnInit {
     // console.log(this.contact);
     this._contacts_service.add_contact(this.contact);
     this.add_contact_form.reset();
+    Swal.fire("Your contact has been succesfully added","Congratulations!","success");
     this.router.navigate(['/list'])
 
 

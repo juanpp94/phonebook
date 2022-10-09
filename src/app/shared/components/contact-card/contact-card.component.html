@@ -17,15 +17,15 @@
                 <picture class="icons">
                     <img class="img-fluid rounded-start" src="../../../../assets/envelope.png" alt="envelope-image">
                 </picture>
-                <p class="card-text"><small class="text-muted">{{contact.email}}</small></p>
+                <p class="card-text"><small >{{contact.email}}</small></p>
             </div>
 
         </header>
         <footer>
-            <picture class="icons">
+            <picture id="edit-icon">
                 <img class="img-fluid rounded-start" routerLink="/edit/{{contact.id}}" src="../../../../assets/edit.png" alt="edit-icon">
             </picture>
-            <picture class="icons">
+            <picture id="delete-icon">
                 <img class="img-fluid rounded-start" (click)="delete_contact(contact.id)" src="../../../../assets/delete.png" alt="delete-icon">
             </picture>
         </footer>

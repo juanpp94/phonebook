@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Contact } from 'src/app/models/contact.interface';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ContactsService {
   id: number = 0;
-  //contacts: Contact[] = [];
+  contacts: Contact[] = [];
   constructor() { }
 
   add_contact(contact: Contact) {
@@ -17,6 +18,7 @@ export class ContactsService {
       this.id += 1;
       contact.id = this.id;
       contacts.push(contact);
+      this.contacts.push(contact);
       localStorage.setItem('contacts',JSON.stringify(contacts));
     } else {
       console.log(contacts_bd);
@@ -71,11 +73,22 @@ export class ContactsService {
 
   delete_contact(id: number): void {
     let contacts_db = JSON.parse(localStorage.getItem('contacts')!);
-    if(contacts_db !== null) {
-      let updated_contacts = contacts_db.filter((contact:Contact) => contact.id !== id);
-      console.log(updated_contacts);
-      localStorage.setItem('contacts',JSON.stringify(updated_contacts));
-      
+
+    for (let i = 0; i < contacts_db.length; i++) {
+      if (id == contacts_db[i].id) {
+        console.log("este es:",contacts_db[i].id)
+        contacts_db.splice(i, 1);
+        localStorage.setItem('contacts', JSON.stringify(contacts_db));
+        break
+      }
     }
+    // if(contacts_db !== null) {
+    //   let updated_contacts = contacts_db.filter((contact:Contact) => contact.id !== id);
+    //   console.log(updated_contacts);
+    //   localStorage.setItem('contacts',JSON.stringify(updated_contacts));
+      
+    // }
   }
+
+  
 }

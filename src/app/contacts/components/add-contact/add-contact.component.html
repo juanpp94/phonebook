@@ -1,8 +1,10 @@
-<section class="add-contact-form mt-5 mb-5">
-  <div class="card mb-3" style="max-width: 540px;">
+<section class="add-contact-form ">
+  <div class="card mt-5 mb-5" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="../../../../assets/contact-agenda.png" class="img-fluid rounded-start" alt="...">
+        <picture class="add-icon">
+          <img src="../../../../assets/add-user-icon.png" class="img-fluid rounded-start" alt="...">
+        </picture>
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -11,22 +13,36 @@
             <div class="row">
               <div class="mb-3 col-sm-12 col-md-6">
                 <label for="first_name" class="form-label">First name:</label>
-                <input type="text" class="form-control" id="first_name" formControlName="first_name">
+                <input type="text" class="form-control" id="first_name" formControlName="first_name" placeholder="Juan">
+                <div *ngIf="add_contact_form.controls['first_name'].errors?.['required'] && add_contact_form.controls['first_name'].dirty"  >
+                  <!-- <img src="../../../../assets/error.png" alt="error-icon">
+                  <p>First name is a required field</p> -->
+                  <p class="error-icon">First name is a required field</p> 
+                </div>
               </div>
               <div class="mb-3 col-sm-12 col-md-6">
-                  <label for="last_name" class="form-label">Last name:</label>
-                  <input type="text" class="form-control" id="last_name" formControlName="last_name">
+                <label for="last_name" class="form-label">Last name:</label>
+                <input type="text" class="form-control" id="last_name" formControlName="last_name" placeholder="Porras">
+                <div *ngIf="add_contact_form.controls['last_name'].errors?.['required'] && add_contact_form.controls['last_name'].dirty" >
+                  <p class="error-icon">Last name is a required field</p>
+                </div>
               </div>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" formControlName="email">
+              <input type="email" class="form-control" id="email" formControlName="email" placeholder="myemail@gmail.com">
+              <div *ngIf="add_contact_form.controls['email'].errors?.['required'] && add_contact_form.controls['email'].dirty"  >
+                <p class="error-icon">Email is a required field</p>
+              </div>
             </div>
             <div class="mb-3">
               <label for="telephone" class="form-label">Telephone:</label>
-              <input type="tel" class="form-control" id="telephone" formControlName="telephone">
+              <input type="tel" class="form-control" id="telephone" formControlName="telephone" placeholder="+581234567">
+              <div *ngIf="add_contact_form.controls['telephone'].errors?.['required'] && add_contact_form.controls['telephone'].dirty"  >
+                <p class="error-icon">Telephone is a required field</p>
+              </div>
             </div>
-            <button type="submit"  [disabled]="!add_contact_form.valid" class="btn btn-primary btn-lg col-12">Submit</button>
+            <button type="submit"  [disabled]="!add_contact_form.valid" class="btn btn-warning col-12 mt-2">Submit</button>
           </form>
         </div>
       </div>
