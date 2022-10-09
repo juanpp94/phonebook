@@ -6,6 +6,7 @@ import { MenuCardComponent } from './components/menu-card/menu-card.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { ContactsRoutingModule } from '../contacts/contacts-routing.module';
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgxPaginationModule
   ],
   exports: [
     NavbarComponent,

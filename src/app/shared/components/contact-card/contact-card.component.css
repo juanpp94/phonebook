@@ -2,7 +2,11 @@ article {
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 50px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3rem 0.6rem;
+    box-shadow: rgba(0, 0, 0,0.1) 0px 0.3rem 1.2rem;
+}
+
+.card {
+    border-radius: 0.09rem;
 }
 
 header {

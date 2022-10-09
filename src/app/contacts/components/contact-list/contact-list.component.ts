@@ -12,6 +12,7 @@ export class ContactListComponent implements OnInit {
 
   contacts:Contact[] = [];
   message: string = '';
+  page: number = 1;
   constructor(private _contact_service: ContactsService) { }
 
   ngOnInit(): void {

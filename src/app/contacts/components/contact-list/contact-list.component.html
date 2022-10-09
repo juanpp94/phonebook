@@ -36,9 +36,12 @@
       </div>
   </article> -->
   
-    <app-contact-card  (messageEvent)="receive_update($event)" [contact]="contact" *ngFor="let contact of contacts"></app-contact-card>
-    <!-- <div class="row container">
-      <app-contact-card class="col-12 col-md-6 col-lg-4"[contact]="contact" *ngFor="let contact of contacts"></app-contact-card>
-    </div> -->
+    <app-contact-card  (messageEvent)="receive_update($event)" [contact]="contact" 
+    *ngFor="let contact of contacts | paginate: { itemsPerPage: 3, currentPage: page }"></app-contact-card>
 </main>
+<pagination-controls *ngIf="contacts.length !== 0"class="my-pagination"(pageChange)="page = $event" ></pagination-controls>
+    
+
+
+
 

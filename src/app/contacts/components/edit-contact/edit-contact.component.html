@@ -1,41 +1,75 @@
 <section class="edit-contact-form ">
-    <div class="card mt-5 mb-5" style="max-width: 540px;">
-        <div class="card-body">
+  <div class="card mt-5 mb-5" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <picture class="add-icon">
+          <img src="../../../../assets/edit-user-icon.png" class="img-fluid rounded-start" alt="add-user-icon">
+        </picture>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body pt-4">
           <h5 class="card-title mb-3">Edit Contact</h5>
           <form [formGroup]="edit_contact_form" (ngSubmit)="update_contact_info()">
             <div class="row">
               <div class="mb-3 col-sm-12 col-md-6">
                 <label for="first_name" class="form-label">First name:</label>
-                <input type="text" class="form-control" id="first_name" formControlName="first_name">
-                <div *ngIf="edit_contact_form.controls['first_name'].errors?.['required'] && edit_contact_form.controls['first_name'].dirty"  class="alert alert-danger" >
-                  First name is a required field
+                <input type="text" class="form-control" id="first_name" formControlName="first_name" placeholder="Juan">
+                <div *ngIf="edit_contact_form.controls['first_name'].errors?.['required'] && edit_contact_form.controls['first_name'].dirty"  >
+                  <!-- <img src="../../../../assets/error.png" alt="error-icon">
+                  <p>First name is a required field</p> -->
+                  <p class="error-icon">First name is a required field</p> 
                 </div>
               </div>
               <div class="mb-3 col-sm-12 col-md-6">
                 <label for="last_name" class="form-label">Last name:</label>
-                <input type="text" class="form-control" id="last_name" formControlName="last_name">
-                <div *ngIf="edit_contact_form.controls['last_name'].errors?.['required'] && edit_contact_form.controls['last_name'].dirty"  class="alert alert-danger" >
-                  Last name is a required field
+                <input type="text" class="form-control" id="last_name" formControlName="last_name" placeholder="Porras">
+                <div *ngIf="edit_contact_form.controls['last_name'].errors?.['required'] && edit_contact_form.controls['last_name'].dirty" >
+                  <p class="error-icon">Last name is a required field</p>
                 </div>
               </div>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" formControlName="email">
-              <div *ngIf="edit_contact_form.controls['email'].errors?.['required'] && edit_contact_form.controls['email'].dirty"  class="alert alert-danger" >
-                Email is a required field
+              <input type="email" class="form-control" id="email" formControlName="email" placeholder="myemail@gmail.com">
+              <div *ngIf="edit_contact_form.controls['email'].errors?.['required'] && edit_contact_form.controls['email'].dirty"  >
+                <p class="error-icon">Email is a required field</p>
               </div>
             </div>
             <div class="mb-3">
               <label for="telephone" class="form-label">Telephone:</label>
-              <input type="tel" class="form-control" id="telephone" formControlName="telephone">
-              <div *ngIf="edit_contact_form.controls['telephone'].errors?.['required'] && edit_contact_form.controls['telephone'].dirty"  class="alert alert-danger" >
-                Telephone is a required field
+              <input type="tel" class="form-control" id="telephone" formControlName="telephone" placeholder="+584123456789">
+              <div *ngIf="edit_contact_form.controls['telephone'].errors?.['required'] && edit_contact_form.controls['telephone'].dirty"  >
+                <p class="error-icon">Telephone is a required field</p>
               </div>
             </div>
-            
             <button type="submit"  [disabled]="!edit_contact_form.valid" class="btn btn-warning col-12 mt-2">Submit</button>
           </form>
         </div>
+      </div>
     </div>
+  </div>
+    <!-- <div class="card" style="width: 50%; padding-left: 50px; padding-right: 50px;">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Add Contact</h5>
+          <form [formGroup]="edit_contact_form" (ngSubmit)="send_contact_info()">
+            <div class="mb-3 col-sm-4">
+                <label for="first_name" class="form-label">First name:</label>
+                <input type="text" class="form-control" id="first_name" formControlName="first_name">
+            </div>
+            <div class="mb-3 col-sm-5">
+                <label for="last_name" class="form-label">Last name:</label>
+                <input type="text" class="form-control" id="last_name" formControlName="last_name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" formControlName="email">
+            </div>
+            <div class="mb-3">
+              <label for="telephone" class="form-label">Telephone:</label>
+              <input type="tel" class="form-control" id="telephone" formControlName="telephone">
+            </div>
+            <button type="submit"  [disabled]="!edit_contact_form.valid" class="btn btn-primary btn-lg col-12">Submit</button>
+          </form>
+        </div>
+    </div> -->
 </section>

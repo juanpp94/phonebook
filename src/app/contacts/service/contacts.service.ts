@@ -8,6 +8,7 @@ import { Contact } from 'src/app/models/contact.interface';
 export class ContactsService {
   id: number = 0;
   contacts: Contact[] = [];
+  page: number = 1;
   constructor() { }
 
   add_contact(contact: Contact) {

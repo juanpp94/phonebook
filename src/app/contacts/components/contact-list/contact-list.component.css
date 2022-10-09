@@ -3,9 +3,24 @@
   flex-flow: row wrap;
   justify-content: center;
   min-height: 91vh;
-  background-color: rgb(255, 237, 203)
+  background-color: rgb(255, 237, 203);
 }
 
+.my-pagination ::ng-deep .ngx-pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: -85px;
+    background-color: rgb(255, 237, 203);
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #531bba;
+
+  }
 
 
 .no-contacts-message {
@@ -20,7 +35,6 @@ article {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 50px;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3rem 0.6rem; */
 }
 
 header {
@@ -116,6 +130,20 @@ footer {
       gap: 15px;
   }
 
+  .my-pagination ::ng-deep .ngx-pagination {
+    display: flex;
+justify-content: center;
+align-content: center;
+margin-top: 0px;
+background-color: rgb(255, 237, 203);
+padding-top: 10px;
+padding-bottom: -10px;
+margin-bottom: 0px;
+}
+
+
+
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -162,6 +190,29 @@ footer {
       margin-right: 15px;
       gap: 15px;
   }
+
+  .my-pagination ::ng-deep .ngx-pagination {
+    display: flex;
+justify-content: center;
+align-content: center;
+margin-top: -20px;
+background-color: rgb(255, 237, 203);
+padding-top: 10px;
+padding-bottom: 40px;
+margin-bottom: 0px;
+}
+
+.my-pagination ::ng-deep .ngx-pagination {
+    display: flex;
+justify-content: center;
+align-content: center;
+margin-top: -20px;
+background-color: rgb(255, 237, 203);
+padding-top: 10px;
+padding-bottom: 40px;
+margin-bottom: 0px;
+}
+  
 
 }
 
@@ -210,6 +261,17 @@ footer {
       gap: 15px;
   }
 
+    .my-pagination ::ng-deep .ngx-pagination {
+        display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: -20px;
+    background-color: rgb(255, 237, 203);
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -218,6 +280,17 @@ footer {
       margin-left: 25px;
       margin-right: 25px;
       margin-top: 50px;
+  }
+
+  .my-pagination ::ng-deep .ngx-pagination {
+    display: flex;
+justify-content: center;
+align-content: center;
+margin-top: 0px;
+background-color: rgb(255, 237, 203);
+padding-top: 20px;
+padding-bottom: 40px;
+margin-bottom: 0px;
   }
 
   header {

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
@@ -22,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     ContactsRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ],
   providers: [ContactsService],
 })
