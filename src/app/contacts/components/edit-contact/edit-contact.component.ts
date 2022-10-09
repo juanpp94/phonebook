@@ -28,18 +28,21 @@ export class EditContactComponent implements OnInit {
     
   }
 
+  /**
+   * Method to load in the form the current information of the contact
+   * @param id Id of the user whose information will be modified
+   */
   set_contact_info(id:number): void {
     let contact = this._contact_service.get_contact(id);
     this.edit_contact_form.setValue({first_name: contact.first_name, last_name: contact.last_name, email: contact.email, telephone: contact.telephone});
-    // this.edit_contact_form.value.last_name = contact.last_name;
-    // this.edit_contact_form.value.email = contact.email;
-    // this.edit_contact_form.value.telephone = contact.telephone;
+
   }
 
+  /**
+   * Method to send to the service the updated information of the contact
+   */
   update_contact_info() {
     let contact_info_updated = {id:this.int_id, ...this.edit_contact_form.value} as Contact;
-    // let contact_info_updated = this.edit_contact_form.value;
-    // contact_info_updated['id'] = this.int_id;
     console.log(contact_info_updated);
     this._contact_service.edit_contact(contact_info_updated);
     this.edit_contact_form.reset();

@@ -56,14 +56,6 @@
 
 @media only screen and (max-width: 600px) {
 
-  .alert-danger {
-    margin-top: 15px;
-    padding: 5px;
-  }
-  .col-md-4 {
-    display: none;
-  }
-
   .card {
     margin-left: 25px;
     margin-right: 25px;

@@ -20,14 +20,22 @@ export class ContactCardComponent implements OnInit {
     
   }
 
+  /**
+   * Function to get the contacts from the service
+   * @returns Array of contacts
+   */
   get_contacts():Contact[] {
     this.contacts = this._contact_service.get_contacts();
     return this.contacts;
     
   }
 
+  /**
+   * Method to send to the service the id of the users that is going to be deleted
+   * @param id Id of the contact that is going to be deleted
+   */
   delete_contact(id:number):void {
-    // console.log(id);
+    //Modal that shows a message to ensure that the user wants to delete the contact
     Swal.fire({
       title: 'Are you sure want to remove?',
       text: 'You will not be able to recover this contact!',
@@ -56,12 +64,5 @@ export class ContactCardComponent implements OnInit {
     
   }
 
-
-  // delete_contact(id:number):void {
-  //   // console.log(id);
-  //   this._contact_service.delete_contact(id);
-  //   this.messageEvent.emit(this.message)
-    
-  // }
 
 }

@@ -11,10 +11,10 @@ import Swal from 'sweetalert2';
 })
 export class AddContactComponent implements OnInit {
   add_contact_form = new FormGroup({
-    first_name: new FormControl('',[Validators.required]),
+    first_name: new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z]+$")]),
     last_name: new FormControl('',[Validators.required]),
     email: new FormControl('',[Validators.required, Validators.email]),
-    telephone: new FormControl('',[Validators.required])
+    telephone: new FormControl('',[Validators.required,Validators.pattern("^[0-9]*$")])
   });
   contact: Contact = {'id':-1,'first_name':'','last_name':'','email':'','telephone':''};
 
@@ -23,7 +23,10 @@ export class AddContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  send_contact_info() {
+  /**
+   * Method to send to the service the information of the new contact
+   */
+  send_contact_info():void {
     let contact_info = this.add_contact_form.value;
     // console.log(this.add_contact_form.value);
     this.contact.first_name = contact_info.first_name as string;

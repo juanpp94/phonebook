@@ -20,45 +20,25 @@ export class ContactListComponent implements OnInit {
     console.log(this.contacts);
   }
 
+  /**
+   * Function to get the contacts from the service
+   * @returns Array of contacts
+   */
   get_contacts():Contact[] {
     this.contacts = this._contact_service.get_contacts();
     return this.contacts;
     
   }
 
+  /**
+   * Method by which the component receives a notification from the child component (contact-card)
+   *  indicating that a contact has been deleted.
+   * @param $event indicates that a user has been deleted
+   */
   receive_update($event: string) {
     this.message = $event;
     this.get_contacts();
   }
 
-  // delete_contact(id:number):void {
-  //   // console.log(id);
-  //   Swal.fire({
-  //     title: 'Are you sure want to remove?',
-  //     text: 'You will not be able to recover this contact!',
-  //     icon: 'warning',
-  //     showCancelButton: true,
-  //     confirmButtonText: 'Yes, delete it!',
-  //     cancelButtonText: 'No, keep it'
-  //   }).then((result) => {
-  //     if (result.value) {
-  //       this._contact_service.delete_contact(id);
-  //       this.get_contacts();
-  //       Swal.fire(
-  //         'Deleted!',
-  //         'Your contact has been deleted.',
-  //         'success'
-  //       )
-  //     } else if (result.dismiss === Swal.DismissReason.cancel) {
-  //       Swal.fire(
-  //         'Cancelled',
-  //         'Your contact is safe :)',
-  //         'error'
-  //       )
-  //     }
-  //   })
-    
-    
-  // }
 
 }

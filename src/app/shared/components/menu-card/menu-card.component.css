@@ -19,27 +19,11 @@ h5 {
     column-gap: 25px;
 }
 
-@media only screen and (max-width: 1200px) {
 
-    .shortcuts {
-        display: flex;
-        column-gap: 25px;
-    }
-    
-}
-
-@media only screen and (max-width: 992px) {
-
-    .shortcuts {
-        display: flex;
-        column-gap: 25px;
-    }
-}
 
 @media only screen and (max-width: 768px) {
 
     .shortcuts {
-        display: flex;
         flex-direction: column;
         row-gap: 25px;
     }
