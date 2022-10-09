@@ -12,10 +12,10 @@ import { ContactsService } from '../../service/contacts.service';
 export class EditContactComponent implements OnInit {
   int_id: number = -1;
   edit_contact_form = new FormGroup({
-    first_name: new FormControl('',Validators.required),
-    last_name: new FormControl('',[Validators.required]),
+    first_name: new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z]+$")] ),
+    last_name: new FormControl('',[Validators.required, Validators.pattern("^[a-zA-Z]+$")] ),
     email: new FormControl('',[Validators.required, Validators.email]),
-    telephone: new FormControl('',[Validators.required])
+    telephone: new FormControl('',[Validators.required, Validators.pattern("^[0-9]*$")])
 
   })
   constructor(private route: ActivatedRoute, private _contact_service: ContactsService, private router: Router) { }

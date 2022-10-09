@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class AddContactComponent implements OnInit {
   add_contact_form = new FormGroup({
     first_name: new FormControl('',[Validators.required,Validators.pattern("^[a-zA-Z]+$")]),
-    last_name: new FormControl('',[Validators.required]),
+    last_name: new FormControl('',[Validators.required, Validators.pattern("^[a-zA-Z]+$")]),
     email: new FormControl('',[Validators.required, Validators.email]),
     telephone: new FormControl('',[Validators.required,Validators.pattern("^[0-9]*$")])
   });

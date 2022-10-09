@@ -17,12 +17,18 @@
                 <div *ngIf="edit_contact_form.controls['first_name'].errors?.['required'] && edit_contact_form.controls['first_name'].dirty"  >
                   <p class="error-icon">First name is a required field</p> 
                 </div>
+                <div *ngIf="edit_contact_form.controls['first_name'].errors?.['pattern'] && edit_contact_form.controls['first_name'].dirty"  >
+                  <p class="error-icon">First name must contain only letters</p> 
+                </div>
               </div>
               <div class="mb-3 col-sm-12 col-md-6">
                 <label for="last_name" class="form-label">Last name:</label>
                 <input type="text" class="form-control" id="last_name" formControlName="last_name" placeholder="Porras">
                 <div *ngIf="edit_contact_form.controls['last_name'].errors?.['required'] && edit_contact_form.controls['last_name'].dirty" >
                   <p class="error-icon">Last name is a required field</p>
+                </div>
+                <div *ngIf="edit_contact_form.controls['last_name'].errors?.['pattern'] && edit_contact_form.controls['last_name'].dirty"  >
+                  <p class="error-icon">Last name must contain only letters</p> 
                 </div>
               </div>
             </div>
@@ -35,9 +41,12 @@
             </div>
             <div class="mb-3">
               <label for="telephone" class="form-label">Telephone:</label>
-              <input type="tel" class="form-control" id="telephone" formControlName="telephone" placeholder="+584123456789">
+              <input type="tel" class="form-control" id="telephone" formControlName="telephone" placeholder="584123456789">
               <div *ngIf="edit_contact_form.controls['telephone'].errors?.['required'] && edit_contact_form.controls['telephone'].dirty"  >
                 <p class="error-icon">Telephone is a required field</p>
+              </div>
+              <div *ngIf="edit_contact_form.controls['telephone'].errors?.['pattern'] && edit_contact_form.controls['telephone'].dirty"  >
+                <p class="error-icon">Telephone must only contain numbers</p>
               </div>
             </div>
             <button type="submit"  [disabled]="!edit_contact_form.valid" class="btn btn-warning col-12 mt-2">Submit</button>

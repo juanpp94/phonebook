@@ -27,6 +27,9 @@
                 <div *ngIf="add_contact_form.controls['last_name'].errors?.['required'] && add_contact_form.controls['last_name'].dirty" >
                   <p class="error-icon">Last name is a required field</p>
                 </div>
+                <div *ngIf="add_contact_form.controls['last_name'].errors?.['pattern'] && add_contact_form.controls['last_name'].dirty"  >
+                  <p class="error-icon">Last name must contain only letters</p> 
+                </div>
               </div>
             </div>
             <div class="mb-3">
